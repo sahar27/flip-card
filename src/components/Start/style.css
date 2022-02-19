@@ -30,55 +30,8 @@
   margin-top: 4%;
 }
 
-.btn1{
-  font-family: 'Balsamiq Sans', cursive;
-  font-size: 25px;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  color: rgb(0, 220, 170);
-  cursor: pointer;
-  border: 0px;
-  padding: 0.25em 0.5em;
-  position: relative;
-  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
-  margin: 0 20px;
-  background-color: white;
-  height:80px;
-	width:130px;
-}
-.btn2{
-  font-family: 'Balsamiq Sans', cursive;
-  font-size: 25px;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  color: rgb(0, 220, 170);
-  cursor: pointer;
-  border: 0px;
-  padding: 0.25em 0.5em;
-  position: relative;
-  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
-  margin: 0 20px;
-  background-color: white;
-  height:80px;
-	width:140px;
-}
-.btn3{
-  font-family: 'Balsamiq Sans', cursive;
-  font-size: 25px;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  color: rgb(0, 220, 170);
-  cursor: pointer;
-  border: 0px;
-  padding: 0.25em 0.5em;
-  position: relative;
-	border-radius: 70% 20% 50% 50% / 30% 40% 50% 70%;
-  margin: 0 20px;
-  background-color: white;
-  height:80px;
-	width:140px;
-}
-.btn4{
+.btn1 , .btn2 ,  .btn3,  .btn4  {
+  transition: 0.5s ease;
   font-family: 'Balsamiq Sans', cursive;
   font-size: 20px;
   font-weight: bolder;
@@ -88,59 +41,37 @@
   border: 0px;
   padding: 0.25em 0.5em;
   position: relative;
-  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
   margin: 0 20px;
   background-color: white;
   height:80px;
-	width:130px;
 }
-.btn1:hover {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
+.btn1:hover , .btn2:hover ,  .btn3:hover,  .btn4:hover  {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
   -webkit-animation:'';
   -moz-animation:none;
   -ms-animation:'';
   -o-animation:'';
   animation:'';
 }
-.btn2:hover {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
-  -webkit-animation:'';
-  -moz-animation:none;
-  -ms-animation:'';
-  -o-animation:'';
-  animation:'';
+.btn1{
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  width:130px;
 }
-.btn3:hover {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
-  -webkit-animation:'';
-  -moz-animation:none;
-  -ms-animation:'';
-  -o-animation:'';
-  animation:'';
+.btn2{
+  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
+  width:140px;
 }
-.btn4:hover {
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
-  -webkit-animation:'';
-  -moz-animation:none;
-  -ms-animation:'';
-  -o-animation:'';
-  animation:'';
+.btn3{
+  border-radius: 70% 20% 50% 50% / 30% 40% 50% 70%;
+  width:140px;
+}
+.btn4{
+  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
+  width:130px;
 }
 
 .backgroundStart{
