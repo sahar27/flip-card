@@ -10,27 +10,37 @@ function Board({ options }) {
   const [gameOver, setGameOver] = useState(false);
 
   const fronts = [
-    '#9bd2f0',
-    '#b49bf0',
-    '#b9e18c',
-    '#ffdc64',
-    '#ffbe6e',
-    '#ff9191'
+    "#9bd2f0",
+    "#b49bf0",
+    "#b9e18c",
+    "#ffdc64",
+    "#ffbe6e",
+    "#ff9191",
+    "#8cdc96",
+    "#8ce1d2",
+    "#96b4eb",
+    "#b49bf0",
+    "#64c8ff",
+    "#82cd64"
   ];
 
   useEffect(() => {
     if (seconds > 0) {
       setTimeout(() => setSeconds(seconds - 1), 10000);
     } else {
-      setSeconds("Time is over!");
-      setGame(
-        game.map((item, i) => {
-          return {
-            ...item,
-            flipped: true,
-          };
-        })
-      );
+      if (result === options / 2) {
+        setSeconds("You'er awesome!");
+      } else {
+        setSeconds("Time is over!");
+        setGame(
+          game.map((item, i) => {
+            return {
+              ...item,
+              flipped: true
+            };
+          })
+        );
+      }
     }
   });
 
@@ -42,7 +52,7 @@ function Board({ options }) {
         frontId: i,
         content: fronts[i],
         flipped: false,
-        matched: false,
+        matched: false
       };
       newGame.push(firstOption, firstOption);
     }
@@ -61,7 +71,7 @@ function Board({ options }) {
           return {
             ...item,
             flipped: flipped,
-            matched: matched,
+            matched: matched
           };
         } else {
           return item;
@@ -71,12 +81,10 @@ function Board({ options }) {
   };
 
   const isGameOver = () => {
-    let done = true;
-    game.forEach((card) => {
-      if (!card.matched) done = false;
-    });
-    setGameOver(done);
-    console.log("done? ", done);
+    if (result === options / 2 - 1) {
+      setGameOver(true);
+      setSeconds(0);
+    }
   };
 
   const flip = (cardId) => {
@@ -90,6 +98,7 @@ function Board({ options }) {
         setResult(result + 1);
         setFirstCard(null);
         // console.log("same");
+        isGameOver();
       } else {
         // console.log("diff");
         setTimeout(() => {
@@ -101,7 +110,6 @@ function Board({ options }) {
     if (!game[cardId].matched) {
       flipCardTo(firstCard, cardId, !game[cardId].flipped, true);
     }
-    isGameOver();
   };
 
   // console.log("game arr", game);
@@ -110,10 +118,15 @@ function Board({ options }) {
   else {
     return (
       <>
-          <div className="result">
-            <p className="time">Time: {seconds}</p>
-            <p>Score: {result}</p>
-          </div>
+        <div className="result">
+          <p className="time">Time: {seconds}</p>
+          <p>
+            Score: {result} / {options / 2}
+          </p>
+        </div>
+        {gameOver ? (
+          <h1 className="win">YOU WIN!</h1>
+        ) : (
           <div className="Board">
             {game.map((card, i) => {
               return (
@@ -129,6 +142,7 @@ function Board({ options }) {
               );
             })}
           </div>
+        )}
       </>
     );
   }

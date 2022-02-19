@@ -25,7 +25,7 @@ function Start() {
           ) : (
             <>
               <button
-                className="btn2"
+                className="btn4"
                 onClick={() => {
                   const prevOptions = options;
                   setOptions(null);
@@ -36,7 +36,7 @@ function Start() {
               >
                 Start Over
               </button>
-              <button className="btn1" onClick={() => setOptions(null)}>
+              <button className="btn3" onClick={() => setOptions(null)}>
                 Home
               </button>
             </>

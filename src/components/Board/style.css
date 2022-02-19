@@ -5,13 +5,13 @@
   grid-template-columns: auto auto auto auto auto auto;
   gap: 50px;
   justify-content: center;
-  margin: 5%;
+  margin: 3%;
 }
 
 .result {
   display: flex;
   justify-content: center;
-  /* margin-top: 50px; */
+  margin-top: 3%;
 }
 
 .result p{
@@ -22,4 +22,10 @@
 
 .time{
   margin-right: 50px;
+}
+
+.win{
+  font-size: 90px;
+  font-family: 'Balsamiq Sans', cursive;
+  margin-top: 10%;
 }
