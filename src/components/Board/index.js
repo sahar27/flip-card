@@ -29,7 +29,7 @@ function Board({ options }) {
       setTimeout(() => setSeconds(seconds - 1), 10000);
     } else {
       if (result === options / 2) {
-        setSeconds("You'er awesome!");
+        setSeconds("You're awesome!");
       } else {
         setSeconds("Time is over!");
         setGame(

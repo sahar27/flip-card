@@ -34,7 +34,7 @@ function Start() {
                   }, 5);
                 }}
               >
-                Start Over
+                Restart
               </button>
               <button className="btn3" onClick={() => setOptions(null)}>
                 Home
