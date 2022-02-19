@@ -25,7 +25,7 @@ function Board({ options }) {
   ];
 
   useEffect(() => {
-    if (seconds > 0) {
+    if (seconds > 0 && !(result === options/2)) {
       setTimeout(() => setSeconds(seconds - 1), 10000);
     } else {
       if (result === options / 2) {
