@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.containerStart {
+  margin-top: 15%;
+}
+
+.title{
+  font-size: 90px;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.instr {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 18px;
+  margin-top: 6%;
+  padding: 0 20%;
+}
+.start{
+  color: rgb(240, 235, 111);
+  font-size: 35px;
+}
+.heart{
+  color: rgb(225, 145, 145);
+}
+
+.btnStart {
+  margin-top: 0%;
+}
+
+.btn1{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: rgb(0, 220, 170);
+  cursor: pointer;
+  border: 0px;
+  padding: 0.25em 0.5em;
+  position: relative;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+  margin: 0 20px;
+  background-color: white;
+  height:50px;
+	width:100px;
+}
+.btn2{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: rgb(0, 220, 170);
+  cursor: pointer;
+  border: 0px;
+  padding: 0.25em 0.5em;
+  position: relative;
+  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50% ;
+  margin: 0 20px;
+  background-color: white;
+  height:60px;
+	width:110px;
+}
+.btn3{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  color: rgb(0, 220, 170);
+  cursor: pointer;
+  border: 0px;
+  padding: 0.25em 0.5em;
+  position: relative;
+	border-radius: 70% 20% 50% 50% / 30% 40% 50% 70% ;
+  margin: 0 20px;
+  background-color: white;
+  height:60px;
+	width:110px;
+}
+
+.backgroundStart{
+  background: rgb(0, 220, 170);
+  background-size:100%;
+  height:100%;
+  width:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+.shape1{
+	position: absolute;
+	top:-30%;
+	left:20%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+	height:500px;
+	width:500px;
+	background: rgb(155, 210, 240) ;
+}
+.shape2{
+	position: absolute;
+	top:20%;
+	left:5%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+	height:200px;
+	width:200px;
+	background: rgb(180, 155, 240) ;
+}
+.shape3{
+	position: absolute;
+	top:40%;
+	left:65%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 60% 40% 40% 60% / 50% 60% 40% 50% ;
+	height:200px;
+	width:200px;
+	background: rgb(225, 220, 100) ;
+}
+.shape4{
+	position: absolute;
+	top:70%;
+	left:0%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+	height:500px;
+	width:500px;
+	background: rgb(0, 200, 110) ;
+}
+.shape5{
+	position: absolute;
+	top:65%;
+	left:75%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+	height:300px;
+	width:300px;
+  background: rgb(140, 225, 210);
+}
+.shape6{
+	position: absolute;
+	top:0%;
+	left:80%;
+	transform:translate(-50%,50%);
+	background-size:200px 200px;
+	border-radius: 70% 20% 50% 50% / 30% 40% 50% 70% ;
+	height:400px;
+	width:400px;
+  background: rgb(225, 145, 145);
+}
+
+.shape1.animated{
+  -webkit-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2200ms pulsate infinite alternate ease-in-out;
+  animation: 2200ms pulsate infinite alternate ease-in-out;
+}
+.shape2.animated{
+  -webkit-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2400ms pulsate infinite alternate ease-in-out;
+  animation: 2400ms pulsate infinite alternate ease-in-out;
+}
+.shape3.animated{
+  -webkit-animation: 2500ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2500ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2500ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2500ms pulsate infinite alternate ease-in-out;
+  animation: 2500ms pulsate infinite alternate ease-in-out;
+}
+.shape4.animated{
+  -webkit-animation: 2300ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2300ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2300ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2300ms pulsate infinite alternate ease-in-out;
+  animation: 2300ms pulsate infinite alternate ease-in-out;
+}
+.shape5.animated{
+  -webkit-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2200ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2200ms pulsate infinite alternate ease-in-out;
+  animation: 2200ms pulsate infinite alternate ease-in-out;
+}
+.shape6.animated{
+  -webkit-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -moz-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -ms-animation: 2400ms pulsate infinite alternate ease-in-out;
+  -o-animation: 2400ms pulsate infinite alternate ease-in-out;
+  animation: 2400ms pulsate infinite alternate ease-in-out;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+@-webkit-keyframes pulsate {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.3); }
+  100% { -webkit-transform: scale(1); }
+}
+@-moz-keyframes pulsate {
+  0% { -moz-transform: scale(1); }
+  50% { -moz-transform: scale(1.3); }
+  100% { -moz-transform: scale(1); }  
+}
+@-ms-keyframes pulsate {
+  0% { -ms-transform: scale(1); }
+  50% { -ms-transform: scale(1.3); }
+  100% { -ms-transform: scale(1); }  
+}
+@-o-keyframes pulsate {
+  0% { -o-transform: scale(1); }
+  50% { -o-transform: scale(1.3); }
+  100% { -o-transform: scale(1); }  
+}
+.btn1:hover {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation:'';
+  -moz-animation:none;
+  -ms-animation:'';
+  -o-animation:'';
+  animation:'';
+}
+.btn2:hover {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation:'';
+  -moz-animation:none;
+  -ms-animation:'';
+  -o-animation:'';
+  animation:'';
+}
+.btn3:hover {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation:'';
+  -moz-animation:none;
+  -ms-animation:'';
+  -o-animation:'';
+  animation:'';
+}

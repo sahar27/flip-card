@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.Board {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 50px;
+  justify-content: center;
+  margin: 5%;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 50px; */
+}
+
+.result p{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.time{
+  margin-right: 50px;
+}
