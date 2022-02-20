@@ -10,7 +10,7 @@ import { FcIdea, FcBusinesswoman, FcBusinessman } from "react-icons/fc";
 function Start() {
   const [options, setOptions] = useState(null);
   const [audio] = useState(new Audio(background));
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
   let clickSound = new Audio(click);
   audio.loop = true;
 
