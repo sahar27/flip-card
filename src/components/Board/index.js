@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Card from "../Card";
 import "./style.css";
-
+import flipSound from "../../sounds/flip.wav";
+import matchSound from "../../sounds/match.wav";
+import unmatchSound from "../../sounds/unmatch.wav";
+import winSound from "../../sounds/win.wav";
 function Board({ options }) {
   const [game, setGame] = useState([]);
   const [firstCard, setFirstCard] = useState(null);
   const [seconds, setSeconds] = useState(10);
   const [result, setResult] = useState(0);
   const [gameOver, setGameOver] = useState(false);
-
+  let audio = new Audio(flipSound);
+  let matchAudio = new Audio(matchSound);
+  let unmatchAudio = new Audio(unmatchSound);
+  let winAudio = new Audio(winSound);
   const fronts = [
     "#9bd2f0",
     "#b49bf0",
@@ -21,11 +27,10 @@ function Board({ options }) {
     "#96b4eb",
     "#b49bf0",
     "#64c8ff",
-    "#82cd64"
+    "#82cd64",
   ];
-
   useEffect(() => {
-    if (seconds > 0 && !(result === options/2)) {
+    if (seconds > 0 && !(result === options / 2)) {
       setTimeout(() => setSeconds(seconds - 1), 10000);
     } else {
       if (result === options / 2) {
@@ -36,14 +41,13 @@ function Board({ options }) {
           game.map((item, i) => {
             return {
               ...item,
-              flipped: true
+              flipped: true,
             };
           })
         );
       }
     }
   });
-
   useEffect(() => {
     const newGame = [];
     for (let i = 0; i < options / 2; i++) {
@@ -52,17 +56,15 @@ function Board({ options }) {
         frontId: i,
         content: fronts[i],
         flipped: false,
-        matched: false
+        matched: false,
       };
       newGame.push(firstOption, firstOption);
     }
-
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
     console.log(shuffledGame);
     setGame(shuffledGame);
     // console.log("shuffledGame arr", shuffledGame);
   }, []);
-
   const flipCardTo = (firstCard, cardId, flipped, matched) => {
     console.log("id ", cardId);
     setGame(
@@ -71,7 +73,7 @@ function Board({ options }) {
           return {
             ...item,
             flipped: flipped,
-            matched: matched
+            matched: matched,
           };
         } else {
           return item;
@@ -79,15 +81,15 @@ function Board({ options }) {
       })
     );
   };
-
   const isGameOver = () => {
     if (result === options / 2 - 1) {
       setGameOver(true);
       setSeconds(0);
+      winAudio.play();
     }
   };
-
   const flip = (cardId) => {
+    audio.play();
     if (firstCard === null) {
       setFirstCard(cardId);
     } else {
@@ -95,6 +97,7 @@ function Board({ options }) {
       const secondCardContent = game[cardId].frontId;
       if (firstCardContent === secondCardContent) {
         flipCardTo(firstCard, cardId, true, true);
+        matchAudio.play();
         setResult(result + 1);
         setFirstCard(null);
         // console.log("same");
@@ -103,6 +106,7 @@ function Board({ options }) {
         // console.log("diff");
         setTimeout(() => {
           flipCardTo(firstCard, cardId, false, false);
+          unmatchAudio.play(); ////////////////////// edit
           setFirstCard(null);
         }, 1000);
       }
@@ -111,9 +115,7 @@ function Board({ options }) {
       flipCardTo(firstCard, cardId, !game[cardId].flipped, true);
     }
   };
-
   // console.log("game arr", game);
-
   if (game.lenght === 0) return <div>Loading...</div>;
   else {
     return (
@@ -147,5 +149,4 @@ function Board({ options }) {
     );
   }
 }
-
 export default Board;

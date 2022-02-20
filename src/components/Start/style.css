@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
-
 .containerStart {
   margin-top: 4%;
+  position: relative;
 }
-
 .title{
   font-size: 60px;
   font-family: 'Balsamiq Sans', cursive;
@@ -25,20 +24,17 @@
 .heart{
   color: rgb(225, 145, 145);
 }
-
 .btnStart {
-  margin-top: 4%;
+  margin-top: 2%;
 }
-
 .info{
   display: flex;
   justify-content: space-around;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 .inf{
-  margin-left: 50.5%;
+  margin-left: 51.7%;
 }
-
 .btn1 , .btn2 ,  .btn3,  .btn4  {
   transition: 0.5s ease;
   font-family: 'Balsamiq Sans', cursive;
@@ -53,6 +49,7 @@
   background-color: white;
   height:80px;
   margin-bottom: 1%;
+  margin: 1.2% ;
 }
 .btn1:hover , .btn2:hover ,  .btn3:hover,  .btn4:hover  {
   -webkit-transform: scale(1.5);
@@ -65,6 +62,17 @@
   -ms-animation:'';
   -o-animation:'';
   animation:'';
+}
+.soundIcon{
+  position: absolute;
+  font-size: 25px;
+  top: -40px;
+  right: 20px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.soundIcon:hover{
+  transform: scale(1.25) perspective(1px);
 }
 .btn1{
   border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
@@ -82,7 +90,6 @@
   border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
   width:130px;
 }
-
 .backgroundStart{
   background: rgb(0, 220, 170);
   height:100vh;
@@ -91,74 +98,72 @@
   top: 0;
   z-index: -5;
 }
-
 .shape1{
-	position: absolute;
-	top:-30%;
-	left:20%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
-	height:500px;
-	width:500px;
-	background: rgb(155, 210, 240) ;
+  position: absolute;
+  top:-30%;
+  left:20%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+  height:500px;
+  width:500px;
+  background: rgb(155, 210, 240) ;
 }
 .shape2{
-	position: absolute;
-	top:20%;
-	left:5%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
-	height:250px;
-	width:250px;
-	background: rgb(180, 155, 240) ;
+  position: absolute;
+  top:20%;
+  left:5%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+  height:250px;
+  width:250px;
+  background: rgb(180, 155, 240) ;
 }
 .shape3{
-	position: absolute;
-	top:40%;
-	left:65%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 60% 40% 40% 60% / 50% 60% 40% 50% ;
-	height:200px;
-	width:200px;
-	background: rgb(225, 220, 100) ;
+  position: absolute;
+  top:40%;
+  left:65%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 60% 40% 40% 60% / 50% 60% 40% 50% ;
+  height:200px;
+  width:200px;
+  background: rgb(225, 220, 100) ;
 }
 .shape4{
-	position: absolute;
-	top:70%;
-	left:0%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
-	height:500px;
-	width:500px;
-	background: rgb(0, 200, 110) ;
+  position: absolute;
+  top:70%;
+  left:0%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 70% 30% 30% 70% / 60% 40% 60% 40% ;
+  height:500px;
+  width:500px;
+  background: rgb(0, 200, 110) ;
 }
 .shape5{
-	position: absolute;
-	top:65%;
-	left:75%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
-	height:400px;
-	width:400px;
+  position: absolute;
+  top:65%;
+  left:75%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  height:400px;
+  width:400px;
   background: rgb(140, 225, 210);
 }
 .shape6{
-	position: absolute;
-	top:0%;
-	left:80%;
-	transform:translate(-50%,50%);
-	background-size:200px 200px;
-	border-radius: 70% 20% 50% 50% / 30% 40% 50% 70% ;
-	height:400px;
-	width:400px;
+  position: absolute;
+  top:0%;
+  left:80%;
+  transform:translate(-50%,50%);
+  background-size:200px 200px;
+  border-radius: 70% 20% 50% 50% / 30% 40% 50% 70% ;
+  height:400px;
+  width:400px;
   background: rgb(225, 145, 145);
 }
-
 .shape1.animated{
   -webkit-animation: 2200ms pulsate infinite alternate ease-in-out;
   -moz-animation: 2200ms pulsate infinite alternate ease-in-out;
@@ -201,7 +206,6 @@
   -o-animation: 2400ms pulsate infinite alternate ease-in-out;
   animation: 2400ms pulsate infinite alternate ease-in-out;
 }
-
 @keyframes pulsate {
   0% { transform: scale(1); }
   50% { transform: scale(1.3); }
@@ -227,4 +231,3 @@
   50% { -o-transform: scale(1.3); }
   100% { -o-transform: scale(1); }  
 }
-
