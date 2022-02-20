@@ -13,13 +13,16 @@ function Start() {
   const [playing, setPlaying] = useState(true);
   let clickSound = new Audio(click);
   audio.loop = true;
+
   useEffect(() => {
     playing ? audio.play() : audio.pause();
   }, [playing]);
+  
   const toggle = () => setPlaying(!playing);
   const playSound = () => {
     clickSound.play();
   };
+
   return (
     <>
       <div className="containerStart">

@@ -5,6 +5,7 @@ import flipSound from "../../sounds/flip.wav";
 import matchSound from "../../sounds/match.wav";
 import unmatchSound from "../../sounds/unmatch.wav";
 import winSound from "../../sounds/win.wav";
+
 function Board({ options }) {
   const [game, setGame] = useState([]);
   const [firstCard, setFirstCard] = useState(null);
@@ -15,6 +16,7 @@ function Board({ options }) {
   let matchAudio = new Audio(matchSound);
   let unmatchAudio = new Audio(unmatchSound);
   let winAudio = new Audio(winSound);
+
   const fronts = [
     "#9bd2f0",
     "#b49bf0",
@@ -47,7 +49,9 @@ function Board({ options }) {
         );
       }
     }
-  });
+  }, // eslint-disable-next-line  
+  []);
+
   useEffect(() => {
     const newGame = [];
     for (let i = 0; i < options / 2; i++) {
@@ -63,13 +67,14 @@ function Board({ options }) {
     const shuffledGame = newGame.sort(() => Math.random() - 0.5);
     console.log(shuffledGame);
     setGame(shuffledGame);
-    // console.log("shuffledGame arr", shuffledGame);
-  }, []);
+  }, // eslint-disable-next-line 
+  []);
+
   const flipCardTo = (firstCard, cardId, flipped, matched) => {
     console.log("id ", cardId);
     setGame(
       game.map((item, i) => {
-        if (i === cardId || firstCard == i) {
+        if (i === cardId || firstCard === i) {
           return {
             ...item,
             flipped: flipped,
