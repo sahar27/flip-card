@@ -16,7 +16,8 @@ function Start() {
 
   useEffect(() => {
     playing ? audio.play() : audio.pause();
-  }, [playing]);
+  }, // eslint-disable-next-line
+  [playing]);
   
   const toggle = () => setPlaying(!playing);
   const playSound = () => {
