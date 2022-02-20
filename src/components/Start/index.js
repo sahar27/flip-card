@@ -11,17 +11,19 @@ function Start() {
         <h1 className="title">Flip Card Game</h1>
         <div className="btnStart">
           {options === null ? (
-            <>
+            <div className="btns">
               <button className="btn1" onClick={() => setOptions(6)}>
                 Easy
               </button>
+              <br />
               <button className="btn2" onClick={() => setOptions(12)}>
                 Medium
               </button>
+              <br />
               <button className="btn3" onClick={() => setOptions(24)}>
                 Hard
               </button>
-            </>
+            </div>
           ) : (
             <>
               <button
@@ -60,6 +62,11 @@ function Start() {
               Kids will love flipping through cards to find a match{" "}
               <span className="heart">♥</span>
             </p>
+            <div className="info">
+              <p>👥 Age 7+</p>
+              <p>💡 + Boosts memory and recall</p>
+            </div>
+            <p className="inf"> + Increases retention of information</p>
           </div>
         )}
       </div>
